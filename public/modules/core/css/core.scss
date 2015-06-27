@@ -1,0 +1,35 @@
+@charset "UTF-8";
+@import "components/color";
+
+$main-font: 'Nexa Light', verdana, arial, sans-serif;
+$cursive-font: 'Edwardian Script ITC', fancy, cursive;
+body {
+  font-family: $main-font;
+  font-size: 1.7rem;
+}
+
+section {
+  margin-top: 30px;
+}
+
+h1, h2 {
+  font-family: $cursive-font;
+  font-size: 250%;
+}
+.btn {
+  border: 0;
+
+}
+.cursive {
+  font-family: $cursive-font;
+  font-size: 1.5em;
+  line-height: .5rem;
+  margin-top: -5px;
+}
+.img-home {
+  max-height: 350px;
+  width:      300px;
+  max-width:  100%;
+  border: 1px white solid;
+  border-radius: 20px;
+}

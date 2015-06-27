@@ -1,0 +1,19 @@
+<section data-ng-controller="DishesController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Dishes</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="dish in dishes" data-ng-href="#!/dishes/{{dish._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="dish.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="dish.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="dish.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!dishes.$resolved || dishes.length">
+    	No Dishes yet, why don't you <a href="/#!/dishes/create">create one</a>?
+    </div>
+</section>
