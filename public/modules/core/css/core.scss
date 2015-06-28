@@ -1,8 +1,13 @@
 @charset "UTF-8";
-@import "components/color";
 
-$main-font: 'Nexa Light', verdana, arial, sans-serif;
-$cursive-font: 'Edwardian Script ITC', fancy, cursive;
+@import "components/color";
+@import "components/min-variables";
+@import "components/cards";
+
+$main-font: 'Nexa Light', verdana, 'Rokkitt', arial, sans-serif;
+$cursive-font: 'Edwardian Script ITC', 'Rokkitt', cursive;
+$paragraph-font: 'Rokkitt', Garamound, Times, serif;
+
 body {
   font-family: $main-font;
   font-size: 1.7rem;
@@ -16,20 +21,33 @@ h1, h2 {
   font-family: $cursive-font;
   font-size: 250%;
 }
+
+p {
+  font-family: $paragraph-font;
+  font-size: 2rem;
+}
+a {
+  font-family: $main-font;
+
+}
 .btn {
   border: 0;
 
 }
 .cursive {
   font-family: $cursive-font;
-  font-size: 1.5em;
-  line-height: .5rem;
-  margin-top: -5px;
+    font-size: 1.5em;
+  line-height: 1rem;
 }
 .img-home {
-  max-height: 350px;
-  width:      300px;
-  max-width:  100%;
-  border: 1px white solid;
+     max-height: 350px;
+          width: 300px;
+      max-width: 100%;
+         border: 1px white solid;
   border-radius: 20px;
+}
+.navbar {
+  border-bottom: none;
+  font-size: 1.25em;
+  @extend .z-depth-1;
 }

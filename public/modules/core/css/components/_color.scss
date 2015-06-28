@@ -355,6 +355,8 @@ $colors: (
   "shades": $shades
 );
 
+// Color Classes
+
 @each $color_name, $color in $colors {
   @each $color_type, $color_value in $color {
     @if $color_type == "base" {
@@ -364,13 +366,19 @@ $colors: (
       .#{$color_name}-text {
         color: $color_value !important;
       }
+      .#{$color_name}-border {
+        border-bottom: 1px $color_value solid !important;
+      }
     }
     @else {
       .#{$color_name}.#{$color_type} {
         background-color: $color_value !important;
-      }
+      }      
       .#{$color_name}-text.text-#{$color_type} {
         color: $color_value !important;
+      }
+      .#{color_name}-border.border-#{$color_type} {
+        border-bottom: 1px $color_value solid !important;
       }
     }
   }
@@ -383,6 +391,9 @@ $colors: (
   }
   .#{$color}-text {
     color: $color_value !important;
+  }
+  .#{$color}-border {
+    border: 1px solid $color_value;
   }
 }
 
