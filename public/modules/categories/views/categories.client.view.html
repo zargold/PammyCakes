@@ -1,18 +1,23 @@
 <section data-ng-controller="CategoriesController" data-ng-init="find()">
-  <div class="card-panel">
+  <div class="card-panel brown lighten-4">
       <h1>Categories</h1>
-  <div class="form-group has-feedback">
-      <label class="control-label brown-text text-darken-1" for="search">
+      <h3 class="control-label brown-text text-darken-1" for="search">
       Find your dessert!
-      </label>
-      <i class="form-control-feedback glyphicon glyphicon-search deep-orange-text"></i>
-      <input type="search" data-ng-model="search" typeahead="category as category.name for category in categories | filter:$viewValue | limitTo:8" class="form-control hint" typeahead-on-select="categorySearch($item)" placeholder="Search Category...">
+      </h3>
+  <div class="input-group">
+      <input type="search" data-ng-model="search" typeahead="category as category.name for category in categories | filter:$viewValue | limitTo:8" class="form-control hint input-lg" typeahead-on-select="categorySearch($item)" placeholder="Brownies">
+      <span class="input-group-btn">
+        <button class="btn btn-lg btn-primary" type="button">
+        <i title="search" class="glyphicon glyphicon-search"></i>
+        </button>
+      </span>
   </div>
   </div>
-  <div class="list-group row">
-    <a data-ng-repeat="category in categories | limitTo: offset - categories.length | limitTo: pageSize" data-ng-href="#!/categories/{{category._id}}" class="list-group-item card-panel col-md-6">
+  <div class="row">
+    <a data-ng-repeat="category in categories | limitTo: offset - categories.length | limitTo: pageSize" data-ng-href="/#!/categories/{{category._id}}" class="card-panel col-md-6 avatar">
       <h3 class="list-group-item-heading" data-ng-bind="category.name"></h3>
       <i class="{{category.icon}}"></i> &nbsp; <span data-ng-bind="category.description"></span>
+      <img src=""/>
     </a>
   </div>
   <pagination total-items="categories.length" ng-model="currentPage" ng-change="pageChanged()" max-size="pageSize" ng-show="categories.length > pageSize"></pagination>

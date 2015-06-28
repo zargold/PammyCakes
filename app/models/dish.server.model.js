@@ -40,10 +40,6 @@ var DishSchema = new Schema({
 	  default: '',
 	  trim: true
 	},
-	tags: [{
-		type: Schema.Types.ObjectId,
-		ref: 'Tags'
-	}],
 	quantityPerUnit: {
 	    type: String,
 	    default: 1
@@ -52,14 +48,17 @@ var DishSchema = new Schema({
 	    type: Number,
 	    default: 0
 	},
+	tags: [{
+		type: Schema.Types.ObjectId,
+		ref: 'Tags'
+	}],
 	imgUrl: {
 		type: String,
 		default: '',
 		trim: true
 	},
 	calories: {
-		type: Number,
-		default: 0
+		type: Number
 	},
 	ingredients: [{
 		type: Schema.Types.ObjectId,

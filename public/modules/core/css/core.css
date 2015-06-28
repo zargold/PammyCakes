@@ -2574,6 +2574,9 @@ p {
 a {
   font-family: "Nexa Light", verdana, "Rokkitt", arial, sans-serif; }
 
+.input-group {
+  width: 80%; }
+
 .btn {
   border: 0; }
 
