@@ -48,9 +48,9 @@ var DishSchema = new Schema({
 	    type: Number,
 	    default: 0
 	},
-	tags: [{
+	occasions: [{
 		type: Schema.Types.ObjectId,
-		ref: 'Tags'
+		ref: 'Occasions'
 	}],
 	imgUrl: {
 		type: String,
@@ -60,6 +60,7 @@ var DishSchema = new Schema({
 	calories: {
 		type: Number
 	},
+	
 	ingredients: [{
 		type: Schema.Types.ObjectId,
 		ref: 'Ingredient'

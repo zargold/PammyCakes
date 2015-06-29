@@ -4,7 +4,8 @@
  * Module dependencies.
  */
 var mongoose = require('mongoose'),
-    Schema = mongoose.Schema;
+    Schema = mongoose.Schema,
+    validation = require('./validation.server.model');
 
 /**
  * Validation
@@ -37,7 +38,7 @@ var CategorySchema = new Schema({
         // make this a required field
         required: 'name cannot be blank',
         // wires in a custom validator
-        validate: [validateLength, 'name must be 15 chars in length or less']
+        validate: [validation.len(20), 'name must be 20 chars in length or less']
     },
     icon: {
       type: String,

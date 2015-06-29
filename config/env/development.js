@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-	db: 'mongodb://localhost/pammycakes-dev',
+	db: process.env.MONGOLAB_URI,
 	app: {
 		title: 'PammyCakes - Development Environment'
 	},
