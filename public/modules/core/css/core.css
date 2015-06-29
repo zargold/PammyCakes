@@ -2529,6 +2529,7 @@
     .card .card-content .card-title {
       line-height: 48px; }
   .card .card-action {
+    border-top: 1px solid #fffa;
     border-top: 1px solid rgba(160, 160, 160, 0.2);
     padding: 20px; }
     .card .card-action a {
